@@ -15,52 +15,60 @@ let precioTotalOrqui = 0
 let precioTotal = 0
 
 function activeR() {
-  let active = document.querySelector(".modify_cardR");
-  active.style.display = "flex";
+  let activeRos = document.querySelectorAll(".modify_cardR");
+  activeRos.forEach(function(elemento) {
+  elemento.style.display = "flex";});
   mostrarTotal();
 }
 
 function activeC() {
-  let active = document.querySelector(".modify_cardC");
-  active.style.display = "flex";
+  let activeCor = document.querySelectorAll(".modify_cardC");
+  activeCor.forEach(function(elemento) {
+    elemento.style.display = "flex";});
   mostrarTotal();
 }
 
 function activeO() {
-  let active = document.querySelector(".modify_cardO");
-  active.style.display = "flex";
+  let activeOr = document.querySelectorAll(".modify_cardO");
+  activeOr.forEach(function(elemento) {
+    elemento.style.display = "flex";});
   mostrarTotal();
 }
 
 function actualizarR() {
-  let amountPr = document.querySelector("#a_rosa");
-  amountPr.innerHTML = cantidadRosa;
-  let amountPr2 = document.querySelector("#t_rosa");
+  let amountPr = document.querySelectorAll("#a_rosa");
+  amountPr.forEach(function(elemento) {
+    elemento.innerHTML = cantidadRosa});
+  let amountPr2 = document.querySelectorAll("#t_rosa");
   precioTotalRosa = cantidadRosa * precioRosa;
-  amountPr2.innerHTML = precioTotalRosa;
+  amountPr2.forEach(function(elemento) {
+    elemento.innerHTML = precioTotalRosa});
   precioTotal = precioTotalRosa + precioTotalCorazon + precioTotalOrqui;
   console.log(precioTotal) 
   actualizarTotal();
-  
 }
 
 function actualizarC() {
-  let amountPc = document.querySelector("#a_corazon");
-  amountPc.innerHTML = cantidadCorazon;
-  let amountPc2 = document.querySelector("#t_corazon");
+  let amountPc = document.querySelectorAll("#a_corazon");
+  amountPc.forEach(function(elemento) {
+    elemento.innerHTML = cantidadCorazon});
+  let amountPc2 = document.querySelectorAll("#t_corazon");
   precioTotalCorazon = cantidadCorazon * precioCorazon;
-  amountPc2.innerHTML = precioTotalCorazon;
+  amountPc2.forEach(function(elemento) {
+    elemento.innerHTML = precioTotalCorazon});
   precioTotal = precioTotalRosa + precioTotalCorazon + precioTotalOrqui;
   actualizarTotal();
   console.log(precioTotal) 
 }
 
 function actualizarO() {
-  let amountPo = document.querySelector("#a_orqui");
-  amountPo.innerHTML = cantidadOrqui;
-  let amountPo2 = document.querySelector("#t_orqui");
+  let amountPo = document.querySelectorAll("#a_orqui");
+  amountPo.forEach(function(elemento) {
+    elemento.innerHTML = cantidadOrqui});
+  let amountPo2 = document.querySelectorAll("#t_orqui");
   precioTotalOrqui = cantidadOrqui * precioOrqui;
-  amountPo2.innerHTML = precioTotalOrqui;
+  amountPo2.forEach(function(elemento) {
+    elemento.innerHTML = precioTotalOrqui});
   precioTotal = precioTotalRosa + precioTotalCorazon + precioTotalOrqui;
   actualizarTotal();
   console.log(precioTotal) 
