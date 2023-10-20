@@ -43,7 +43,6 @@
     align-items: center;
     justify-content: center;
     grid-area: total;
-
   }
 
   #mobile_rosa {
@@ -62,9 +61,9 @@
     align-items: center;
   }
 
-.class_amount {
-  padding: 2px;
-}
+  .class_amount {
+    padding: 2px;
+  }
   .search h3 {
     align-self: center;
     margin-bottom: 1%;
@@ -374,7 +373,7 @@
 
   .total_shopping {
     background-color: #f06292;
-    display:none;
+    display: none;
     position: fixed;
     top: 2%;
     right: 7%;
